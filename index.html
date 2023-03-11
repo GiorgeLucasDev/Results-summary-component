@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@200;300;400;500&display=swap"
+    rel="stylesheet">
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      display: grid;
+      grid-template-columns: 3fr 5fr 3fr;
+      grid-template-rows: 2fr 8fr 2fr;
+      height: 100vh;
+    }
+
+    
+
+    .top {
+      grid-column: 1 / 4;
+      grid-row: 1;
+    }
+
+    .left {
+      grid-column: 1 / 2;
+      grid-row: 2;
+    }
+
+    .center {
+      grid-column: 2 / 3;
+      grid-row: 2;
+
+      display: grid;
+      grid-template-columns: repeat(2, 2fr);
+
+      font-family: 'Hanken Grotesk', sans-serif;
+      color: white;
+      box-shadow: hwb(241 76% 0% / 0.233) 10px 25px 16px 5px, hsl(221, 100%, 96%) -6px -2px 16px 0px;
+      border-radius: 20px;
+    }
+
+    .center .result {
+      padding: 20px 40px;
+      border-radius: 20px;
+      background: linear-gradient(0deg, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    .result p {
+      font-size: 16px;
+      font-weight: 400;
+      color: hsl(240, 100%, 92%)
+    }
+
+    .data {
+      margin: 30px 0px;
+      padding: 40px;
+      width: 100px;
+      border-radius: 50%;
+      background: linear-gradient(0deg, hsla(241, 72%, 46%, 0), hsla(256, 72%, 46%, 1));
+    }
+
+    .data h1 {
+      font-size: 58px;
+    }
+
+    .data p {
+      font-size: 16px;
+      color: hsl(240, 100%, 92%);
+    }
+
+    .result>h2 {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+
+
+
+
+
+
+
+    .center .summary {
+      padding: 20px 30px;
+      border-radius: 20px;
+
+      color: hsl(224, 30%, 27%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .summary p {
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .sum {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+
+    .sum .box {
+      font-size: 16px;
+      width: 100%;
+      padding: 10px 0px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-radius: 10px;
+      justify-content: space-between;
+    }
+
+    .box .head {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+
+    .box .title {
+      font-weight: 500;
+    }
+
+    .box .num {
+      padding: 0px 10px;
+    }
+
+    .num .limit {
+      color: hsla(224, 30%, 27%, 0.753);
+    }
+
+    .reaction {
+      background-color: hsla(0, 100%, 67%, 0.1);
+    }
+
+    .reaction .title {
+      color: hsla(0, 100%, 67%);
+    }
+
+    .memory {
+      background-color: hsl(39, 100%, 56%, 0.1);
+    }
+
+    .memory .title {
+      color: hsl(39, 100%, 56%);
+    }
+
+    .verbal {
+      background-color: hsl(166, 100%, 37%, 0.1);
+    }
+
+    .verbal .title {
+      color: hsl(166, 100%, 37%);
+    }
+
+    .visual {
+      background-color: hsl(234, 85%, 45%, 0.1);
+    }
+
+    .visual .title {
+      color: hsl(234, 85%, 45%);
+    }
+
+
+    .box img {
+      padding: 5px 10px;
+    }
+
+
+    .summary>.title,
+    .result>.title {
+      font-size: 22px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: hsl(224, 30%, 27%);
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-align: center;
+      cursor: pointer;
+      margin-bottom: 20px;
+    
+    }
+
+    .button:hover{
+      background-color: hsl(225, 31%, 20%);
+    }
+
+    .button:active{
+      background: linear-gradient(0deg, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+    }
+
+
+    .right {
+      grid-column: 3 / 4;
+      grid-row: 2;
+    }
+
+    .bottom {
+      grid-column: 1 / 4;
+      grid-row: 3;
+    }
+
+    @media screen and (max-width: 375px){
+      .top, .right, .left, .bottom{
+        display: none;
+      } 
+
+      .center{
+        grid-template-columns: none;
+        grid-column: 1 / -1;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+      }
+      
+      .center .result{
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        padding-bottom: 40px;
+        border-bottom-right-radius: 35px;
+        border-bottom-left-radius: 35px;
+
+      }
+
+      .data{
+        padding: 20px;
+      }
+
+      .summary>.title,
+      .result>.title {
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .summary > .title{
+        margin-bottom: 20px;
+        font-weight: 600;
+      }
+
+      .button{
+        margin-top: 20px;
+        margin-bottom: 0px;
+      }
+
+    
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="top">
+  </div>
+  <div class="left">
+  </div>
+  <div class="center">
+    <div class="result">
+      <p class="title">Your Result</p>
+      <div class="data">
+        <h1>76</h1>
+        <p>of 100</p>
+      </div>
+      <h2>Great</h2>
+      <p>You scored higher than 65% of the people who have taken these tests.</p>
+    </div>
+    <div class="summary">
+      <p class="title">Summary</p>
+      <div class="sum">
+        <div class="box reaction">
+          <div class="head">
+            <img src="assets/images/icon-reaction.svg" alt="Reaction icon">
+            <p class="title">Reaction</p>
+          </div>
+          <p class="num">80 <span class="limit">/ 100</span></p>
+        </div>
+        <div class="box memory">
+          <div class="head">
+            <img src="assets/images/icon-memory.svg" alt="memory icon">
+            <p class="title">Memory</p>
+          </div>
+          <p class="num">92 <span class="limit">/ 100</span></p>
+        </div>
+
+        <div class="box verbal">
+          <div class="head">
+            <img src="assets/images/icon-verbal.svg" alt="verbal icon">
+            <p class="title">Verbal</p>
+          </div>
+          <p class="num">61 <span class="limit">/ 100</span></p>
+        </div>
+
+        <div class="box visual">
+          <div class="head">
+            <img src="assets/images/icon-visual.svg" alt="visual icon">
+            <p class="title">Visual</p>
+          </div>
+          <p class="num">72 <span class="limit">/ 100</span></p>
+        </div>
+      </div>
+      <div class="button">
+        <span>Continue</span>
+      </div>
+    </div>
+  </div>
+  <div class="right">
+  </div>
+  <div class="bottom">
+  </div>
+
+
+</body>
+
+</html>
