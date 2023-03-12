@@ -27,7 +27,7 @@
       height: 100vh;
     }
 
-    
+
 
     .top {
       grid-column: 1 / 4;
@@ -201,14 +201,14 @@
       text-align: center;
       cursor: pointer;
       margin-bottom: 20px;
-    
+
     }
 
-    .button:hover{
+    .button:hover {
       background-color: hsl(225, 31%, 20%);
     }
 
-    .button:active{
+    .button:active {
       background: linear-gradient(0deg, hsl(241, 81%, 54%), hsl(252, 100%, 67%));
     }
 
@@ -223,19 +223,30 @@
       grid-row: 3;
     }
 
-    @media screen and (max-width: 375px){
-      .top, .right, .left, .bottom{
-        display: none;
-      } 
+    @media screen and (max-width: 1100px) {
+      .button {
+        margin-top: 20px;
+        margin-bottom: 0px;
+      }
+    }
 
-      .center{
+    @media screen and (max-width: 600px) {
+
+      .top,
+      .right,
+      .left,
+      .bottom {
+        display: none;
+      }
+
+      .center {
         grid-template-columns: none;
         grid-column: 1 / -1;
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
       }
-      
-      .center .result{
+
+      .center .result {
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
         padding-bottom: 40px;
@@ -244,7 +255,7 @@
 
       }
 
-      .data{
+      .data {
         padding: 20px;
       }
 
@@ -254,17 +265,17 @@
         font-weight: 500;
       }
 
-      .summary > .title{
+      .summary>.title {
         margin-bottom: 20px;
         font-weight: 600;
       }
 
-      .button{
+      .button {
         margin-top: 20px;
         margin-bottom: 0px;
       }
 
-    
+
 
     }
   </style>
