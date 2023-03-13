@@ -1,20 +1,6 @@
-# Frontend Mentor - Results summary component solution
+# Results summary component - Solution
 
-This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
-
-## Table of contents
-
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+This is a solution to the [Results summary component challenge on Frontend Mentor](https://www.frontendmentor.io/solutions/results-summary-component-WrIJ-HEZVM).
 
 ## Overview
 
@@ -40,6 +26,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - CSS Grid
+- CSS Flexbox
 
 ### What I learned
 During this challenge, I learned several things, including:
@@ -48,21 +35,13 @@ During this challenge, I learned several things, including:
 - How to use media queries to adjust the layout based on screen size
 - How to use CSS pseudo-classes to add hover and focus states to interactive elements
 
-### Continued development
-
-Although I am happy with the result of this challenge, there are still areas where I can continue to improve my skills, such as:
-
-- Further developing my understanding of CSS Grid Layout and how to use it effectively
-- Experimenting with different design patterns and layouts to improve my creativity and design skills
-- Learning more about accessibility and how to make my designs more inclusive for all users
-
 ### Useful resources
-I found the following resources helpful while working on this challenge:
 
 [CSS Grid Layout on MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) - A comprehensive guide to using CSS Grid Layout
 
-## Author
-GitHub - @NoNullDev
+## Credits 
+
+This project was created by Giorge Lucas.
 
 ## Acknowledgments
 
