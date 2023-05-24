@@ -17,7 +17,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://nonulldev.github.io/Results-summary-component/](https://nonulldev.github.io/Results-summary-component/)
+- Live Site URL: <https://giorgelucasdev.github.io/Results-summary-component/>
 
 ## My process
 
